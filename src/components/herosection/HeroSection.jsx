@@ -1,85 +1,48 @@
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import React, { useContext, useState } from 'react';
-import myContext from '../../context/data/myContext';
-import Layout from '../../components/layout/Layout';
-
-function AllBlogs() {
-  const context = useContext(myContext);
-  const { mode } = context;
-  const backgroundImage = 'https://media.istockphoto.com/id/1430307936/photo/healthy-green-monstera-plant-in-white-ceramic-pot-on-wooden-side-table-with-sunlight-from.webp?b=1&s=170667a&w=0&k=20&c=CsCbRvW_VYNgN04Nzt1Ce52bDkVM92IjNPTgLnLa7wM=';
-
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+function HeroSection() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
 
   return (
-    <Layout>
-      <section
-        className="relative h-64 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundColor: mode === 'dark' ? 'rgb(30, 41, 59)' : '#30336b'
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-3xl md:text-4xl text-white drop-shadow-2xl font-bold underline underline-offset-8">GALLERY</h1>
-          </div>
+    <div className=" w-full h-screen overflow-hidden sticky top-0 -z-50 ">
+      <Slider {...settings} className="h-full">
+        <div className="h-screen">
+          <img
+            src="/src/image/hero_banner.jpeg"
+            alt="Slide 1"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-      </section>
-
-      <nav className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-20 h-20 font-bold w-full">
-        <div className="container mx-auto max-w-full px-4 flex justify-between items-center">
-          <button
-            className="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-          <div className="hidden md:flex justify-center space-x-44 mt-7 origin-center">
-            <a href="#" className="relative text-teal-500 hover:text-teal-600 font-bold ml-20">
-              FONT EXTERIOR
-              <span className="absolute left-0 bottom-0 w-full h-1 bg-teal-500"></span>
-            </a>
-            <a href="#" className="relative text-gray-700 dark:text-gray-300 hover:text-teal-600 ml-20">
-              HOTEL LOBBY
-            </a>
-            <a href="#" className="relative text-gray-700 dark:text-gray-300 hover:text-teal-600 ml-20">
-              ROOM
-            </a>
-            <a href="#" className="relative text-gray-700 dark:text-gray-300 hover:text-teal-600 ml-20">
-              DINING
-            </a>
-            <a href="#" className="relative text-gray-700 dark:text-gray-300 hover:text-teal-600 ml-20">
-              SPA
-            </a>
-            <a href="#" className="relative text-gray-700 dark:text-gray-300 hover:text-teal-600 ml-20">
-              POOL
-            </a>
-          </div>
+        <div className="h-screen">
+          <img
+            src="http://onesalonica.com/media/775299/1440x720_ck_8.jpg?crop=0,0,0,0&cropmode=percentage&width=1440&height=720&rnd=132552944200000000"
+            alt="Slide 2"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-        <div className={`md:hidden flex flex-col space-y-4 mt-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-          <a href="#" className="text-teal-500 hover:text-teal-600 font-bold">
-            FONT EXTERIOR
-          </a>
-          <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-teal-600">
-            HOTEL LOBBY
-          </a>
-          <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-teal-600">
-            ROOM
-          </a>
-          <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-teal-600">
-            DINING
-          </a>
-          <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-teal-600">
-            SPA
-          </a>
-          <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-teal-600">
-            POOL
-          </a>
+        <div className="h-screen">
+          <img
+            src="https://images.unsplash.com/photo-1496602746490-1c2858725ee0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Slide 3"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-      </nav>
-      </Layout>
+        
+      </Slider>
+    </div>
   );
 }
+
 export default HeroSection;
