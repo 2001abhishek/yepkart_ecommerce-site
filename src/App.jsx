@@ -13,6 +13,9 @@ import Blog from './pages/blog/Blog';
 import Contactus from './pages/contactus/Contactus';
 import NoPage from './pages/nopage/NoPage';
 import MyState from "./context/data/myState";
+import Login from './pages/registration/Login';
+import SignUp from './pages/registration/SignUp';
+import ForgetPass from './pages/registration/ForgetPass';
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/order" element={<Order />} />
             <Route path="/*" element={<NoPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/forgetpass" element={<ForgetPass />} />
           </Routes>
         </Router>
       </MyState>
