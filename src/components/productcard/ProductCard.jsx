@@ -21,7 +21,7 @@ function ProductCard() {
               <img
                 src={category.icon}
                 alt={category.name}
-                className="w-8 h-8 mb-2 hidden md:block rounded-bl-2xl"
+                className="w-8 h-8 mb-2 hidden md:block rounded-full"
               />
               <span className="text-white text-sm md:text-base">
                 {category.name} 
