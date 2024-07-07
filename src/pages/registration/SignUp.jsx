@@ -9,10 +9,10 @@ const SignIn = () => {
     <Layout>
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">My Account</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">New Account</h2>
         <div>
-          <h3 className="text-xl mb-4">Login</h3>
-          <p className="mb-4">If you have an account with us, please log in.</p>
+          <h3 className="text-xl mb-4">Sign Up</h3>
+          <p className="mb-4">If you don't have an account with us, please Sign Up.</p>
           <form>
             <div className="mb-4">
               <input

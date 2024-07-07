@@ -16,8 +16,8 @@ import MyState from "./context/data/myState";
 import Login from './pages/registration/Login';
 import SignUp from './pages/registration/SignUp';
 import ForgetPass from './pages/registration/ForgetPass';
-
-
+import Policy from './pages/policy/Policy';
+// import Filter from './components/filter/Filter';
 function App() {
   return (
     <div>
@@ -28,7 +28,7 @@ function App() {
             <Route path="/men" element={<Men />} />
             <Route path="/women" element={<Women />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/contactus" element={<Contactus />} />
+            <Route path="/contact" element={<Contactus/>} />
             <Route path="/order" element={<Order />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/order" element={<Order />} />
@@ -36,6 +36,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forgetpass" element={<ForgetPass />} />
+            <Route path="/policy" element={<Policy/>} />
+            {/* <Route path ="/filter" element={<Filter />} /> */}
           </Routes>
         </Router>
       </MyState>
